@@ -5,7 +5,7 @@ from String import String
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Plink plonk")
+    parser = argparse.ArgumentParser(description="High E simulator")
 
     parser.add_argument(
         "--material",
