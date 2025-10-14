@@ -16,14 +16,10 @@ class String:
 
     def parse(args):
         material = args.material.lower()
-        if material == "nylon":
-            material = Material.Nylon
-        elif material == "steel":
-            material = Material.Steel
-        elif material == "bronze":
-            material = Material.Bronze
-        else:
-            raise ValueError(f"Invalid string material: {material}")
+        try:
+            material = Material.fromString(material)
+        except ValueError as e:
+            raise e
 
         tension = args.tension.lower()
         if tension == "low":
